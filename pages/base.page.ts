@@ -14,9 +14,10 @@ export class BasePage {
         await expect(this.page).toHaveTitle(ENVI_CFG.baseTitle);
     }
 
-    protected async takeScreenshot(screenshotPath: string){
-        await this.page.screenshot({ path: `./screenshots/${screenshotPath}` });
-    }
+    //protected async takeScreenshot(screenshotPath: string){
+    //    const screenshot = await this.page.screenshot({ path: `./screenshots/${screenshotPath}.png` });
+    //    await allure.attachment(screenshotPath, screenshot, 'image/png')
+    //}
 
     // By Role and Name
     protected async verifyElementByRoleAndName(role: any, name: any){

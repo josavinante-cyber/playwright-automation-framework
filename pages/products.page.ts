@@ -13,20 +13,13 @@ export class ProductsPage extends BasePage {
         }
     
         await this.verifyElementText(locator, expectedValue);
-
-        await this.takeScreenshot(`${this.verifyProductDetails.name}.png`);
-
     }
 
     async verifyProductQuantity(expectedValue: number){
         await this.verifyAttributeValue(Locators.lblProductQuantity, "value", expectedValue);
-        
-        await this.takeScreenshot(`${this.verifyProductQuantity.name}.png`);
     }
 
     async addToCart(){
         await this.clickElementByRoleAndName(Locators.btnAddtoCart.role, Locators.btnAddtoCart.name);
-        
-        await this.takeScreenshot(`${this.addToCart.name}.png`);
     }
 }

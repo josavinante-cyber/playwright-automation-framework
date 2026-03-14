@@ -17,7 +17,7 @@ test("User can complete checkout successfully", async ({
     // Create a Fake Test User
     const user = UserFaker.createUser();
     
-    // Open Home Page and Open Account Page
+    // Verify Home Page and Open Account Pane
     await homePage.verifyUrl();
     await homePage.openAccountPane();
 

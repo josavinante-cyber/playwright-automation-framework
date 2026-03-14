@@ -7,16 +7,12 @@ export class AccountPane extends BasePage {
         await this.verifyElement(Locators.headerLogin);
         await this.clickElement(Locators.linkSignUp);
         await this.verifyElement(Locators.headerSignUp);
-        
-        await this.takeScreenshot(`${this.goToSignUp.name}.png`);
     }
 
     async goToLogin(){
         await this.verifyElement(Locators.headerSignUp);
         await this.clickElement(Locators.linkLogin);
         await this.verifyElement(Locators.headerLogin);
-
-        await this.takeScreenshot(`${this.goToLogin.name}.png`);
     }
 
     async userSignUp(email: string, password: string, confirm_password: string){
@@ -24,15 +20,11 @@ export class AccountPane extends BasePage {
         await this.sendKeys(Locators.txtPassword, password);
         await this.sendKeys(Locators.txtConfirmPassword, confirm_password);
         await this.clickElement(Locators.btnSignUp);
-
-        await this.takeScreenshot(`${this.userSignUp.name}.png`);
     }
 
     async userLogin(email: string, password: string){
         await this.sendKeys(Locators.txtEmail, email);
         await this.sendKeys(Locators.txtPassword, password);
         await this.clickElement(Locators.btnLogin);
-
-        await this.takeScreenshot(`${this.userLogin.name}.png`);
     }
 }

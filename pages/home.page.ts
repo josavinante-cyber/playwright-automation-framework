@@ -9,8 +9,6 @@ export class HomePage extends BasePage {
 
     async openAccountPane() {
         await this.clickElement(Locators.btnUserMenu);
-
-        await this.takeScreenshot(`${this.openAccountPane.name}.png`);
     }
 
     async verifyMessageDisplayed(message: string){
@@ -23,28 +21,20 @@ export class HomePage extends BasePage {
         }
 
         await this.verifyElement(locator);  
-
-        await this.takeScreenshot(`${this.verifyMessageDisplayed.name}.png`);
     }
 
     async goToShopAll(){
         await this.clickElement(Locators.linkShopAll);
-
-        await this.takeScreenshot(`${this.goToShopAll.name}.png`);
     }
 
     async searchProduct(itemToSearch: string){
         await this.clickElement(Locators.btnSearch);
         await this.sendKeys(Locators.txtSearchBar, itemToSearch);
         await this.clickElement(Locators.btnSearchBar);
-
-        await this.takeScreenshot(`${this.searchProduct.name}.png`);
     }
 
     async goToProductDetails(product: string){
         await this.clickElementByRoleAndName('link', product);
-
-        await this.takeScreenshot(`${this.goToProductDetails.name}.png`);
     }
 
 }

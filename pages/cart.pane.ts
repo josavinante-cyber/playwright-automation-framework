@@ -5,7 +5,5 @@ export class CartPane extends BasePage {
     
     async checkOut(){
         await this.clickElementByRoleAndName(Locators.btnCheckOut.role, Locators.btnCheckOut.name);
-        
-        await this.takeScreenshot(`${this.checkOut.name}.png`);
     }
 }

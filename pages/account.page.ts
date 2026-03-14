@@ -5,7 +5,5 @@ export class AccountPage extends BasePage {
 
     async signOut(){
         await this.clickElement(Locators.btnLogout);
-        
-        await this.takeScreenshot(`${this.signOut.name}.png`);
     }
 }
